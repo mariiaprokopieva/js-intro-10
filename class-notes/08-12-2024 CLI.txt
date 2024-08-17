@@ -1,0 +1,90 @@
+
+
+
+CLI: command line interface
+GUI: graphical user interface
+
+both are used to give computer some instructions
+
+TERMINAL (for Mac)
+CMD or Command Prompt (for Windows)
+
+PATH: an address of a file or folder
+
+folder = directory
+
+
+SOME MOST USED LINUX/CLI COMMANDS
+
+1. Show active directory I am on now
+pwd: print working directory (Mac)
+cd: change directory (Windows)
+
+2. Create new directory
+mkdir folderName (Mac, Windows)
+mkdir = make directory
+
+3. Change directory to a child folder
+cd directoryName (both Mac, Windows)
+cd = change directory
+
+4. Change directory to a parent folder (one step back)
+cd .. (Mac, Windows):
+
+5. Change directory to HOME
+cd ~ (Mac)
+cd %HOMEPATH% or cd %userprofile% (Windows)
+
+6. Change directory to Root
+cd / (Mac, Windows)
+
+7. Lists existing files and folders in current directory
+ls (Mac): shows only those that are not hidden
+ls -a (Mac): shows all including hidden ones
+dir (Windows)
+
+8. Clear terminal or cmd
+clear (Mac)
+cls (Windows)
+
+9. Create a new folder
+mkdir folderName (Mac, Windows)
+
+10. Remove an existing folder
+Empty:
+    rmdir folderName (Mac, Windows)
+    rd folderName (Windows)
+
+Non-empty:
+    rm -rf folderName (Mac)
+    rmdir /s folderName (Windows) -> asks once again if you are sure
+    rmdir /s /q folderName (Windows) -> remove quitely
+
+11. Create a new file
+Empty:
+    touch fileName (Mac)
+    echo. > fileName (Windows)
+
+Non-empty:
+    echo "Hello" > myNotes.txt
+
+12. Delete an existing file
+    rm fileName (Mac)
+    del fileName (Windows)
+
+HOME Directory:
+Mac: /Users/{user}
+Windows: C:\Users|{user}
+
+ROOT Directory:
+Mac: /
+Windows: C:\
+
+
+
+
+
+
+node jsFileName.js (Mac, Windows)
+
+cmd + shift + dot: show/hide hidden folders/files

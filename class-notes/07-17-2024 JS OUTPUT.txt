@@ -1,0 +1,60 @@
+Every coding statement finishes with semicolon ;
+
+In JS even if you don't put semicolon the code will run, but it's better to put it
+
+Code: Source code: a code, written with programming language
+
+Execute: run the code
+Compile: check the code for errors
+to compile: check for syntax errors
+
+Statement: any line of code (in any programming language)
+Comments: are used for 
+
+/** automatically puts comments for multiline comments
+used for documentation 
+
+Use backslash for escape sequence 
+
+\"
+\'
+
+
+Variables:
+- is a special container that stores a value
+
+let - can be reassigned with new value
+var - can be reassigned with new value
+const - can not be reassigned with new value
+
+INTERVIEW QUESTION
+
+//Another difference bt let and const
+
+let city = 'Chicago'; //variable initialization = declare a variable and assign value
+
+let country; // declaring a variable or variable declaration
+country = US; // value assignment to a variable
+
+const firstMonth = 'January'; //const must always be initialized
+
+const cannot be declared without a value
+
+data types:
+string: is a text data type which can be stored in variables using single or double quotes
+number: is number data which can be stored in variables without quotes
+
+5 + 5 = 10
+'5' + '5' = '55'
+
+Concatenation: combining multiple strings with operator +
+
+'5' + 3 = '53'
+
+
+
+Variable Naming: how  should we name our variables?
+
+Convention: not written rule, but followed by all the programmers
+
+

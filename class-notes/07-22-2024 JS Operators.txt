@@ -1,0 +1,63 @@
+
+
+Recap:
+
+assignment, arithmetic calculations, comparison, logical
+
+Comparison 
+
+let x = 5
+
+All comparison operators return boolean (true or false)
+
+LOGICAL OPERATORS 
+
+&& logical and
+|| logical or
+! logical not
+
+3 > 1 && 1 > 10     false
+valid username && valid password        true
+
+true && true    true
+true && false   false
+false && true   false
+false && false  false
+
+
+1 === 1 || !false   true 
+2 == 3 || 5 < 10    true
+1 == 1 || 2 < 3     true
+1 != 1 || 2 > 5     false
+
+Falsy
+0
+''      -> empty string
+false
+null
+undefined
+NaN
+
+Any other values are truthy
+
+
+Two types of languages: 
+    Compiled: C, C++, Java, C#
+    Strict, more syntax rules
+
+    Interpreted: JavaSkript
+    It is more flexible and evaluates expressions more like a human brain
+
+NOT OPERATOR    !
+
+!false      -> true
+!true       -> false
+
+NULLISH COALESCING OPERATOR (??)
+
+JS has a built in Number object which has many useful properties and functions
+
+properties: information about the object (what it has)
+functions: behaviors of the object (what it does)
+
+

@@ -1,0 +1,57 @@
+
+
+
+RECAP:
+
+if-else: control flow or conditional statements. it works with a condition 
+
+
+if (condition) {
+    // block
+}
+else {
+    // block
+}
+
+ternary operator:
+
+condition ? expression1 : expression2
+
+
+
+if(color !== 'White') {
+    price += 50;
+}
+// we don't need else here
+
+
+let day = "Monday";
+
+if (day === "Monday") {
+    console.log('Go to work!');
+}
+
+// FINDING IF A NUMBER IS EVEN OR ODD WITHOUT FUNCTION
+
+let num = Math.floor(Math.random() * 10) // random from 0 to 9
+
+if (num % 2 === 0) {
+    console.log('EVEN');
+}
+else {
+    console.log('ODD');
+}
+
+// FINDING IF A NUMBER IS EVEN OR ODD WITH A FUNCTION
+
+function evenOdd(num) {
+    if  (num % 2 === 0) {
+    return 'EVEN';
+    }
+    return 'ODD';
+
+}
+
+// we don't need to use else in a function because one 
+something is returned everything else is not run 
+

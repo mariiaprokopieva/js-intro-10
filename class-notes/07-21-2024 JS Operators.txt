@@ -1,0 +1,68 @@
+Recap
+
+Data types:
+1. primitives
+    - programmers can not create primitives
+    1. string
+    2. number
+    3. Boolean
+    4. undefined
+    5. null: explicitly stating abscence of data
+    6. BigInt
+    7. Symbol
+
+2. References
+    - you are allowed to create your custom objects or reference types
+
+    Arrays: is a collection used to store multiple data which are similar (not necessarily)
+
+    const arr = [12, 'John', '123', true, null]; // not prefered much to store different data type in an array but still could Boolean
+
+    const cities = ['Chicago', 'Rome', 'Berlin'];
+
+    Objects: used to store key-value pairs (properties)
+
+    car 
+    make = 'Volkswagen'
+    model = 'Jetta'
+    year = 2022
+    mileage = 10000
+    VIN = ' '
+
+    const car = {
+        make: 'Volkswagen',
+        model: 'Jetta',
+        year: 2022,
+        mileage: 10000,
+        VIN: '1ZN456G2LO461543'
+    };
+
+    =       assignment operator
+
+    comparison
+
+    ==      (loose)     checks only values and returns true if they are statements
+    ===     (strict)    checks both value and data type
+
+GUI - Graphical user interface
+
+
+If the number on the left is less than the number on the right, then the remainder is the left number
+
+        3 % 6 = 3
+
+If the number on the left is divisible by the number on the right, then the remainder is zero
+
+        100 % 50 = 0
+
+If the number on the left is greater than the number on the right, then you will calculate and find the remainder.
+
+
+3 ** 3 - 10 + 25 % 2 + 7 
+
+Order of operation:
+- Parantheses
+- Exponent
+- Multiplication and division
+- Modulus/remainder
+- Addition and substraction

@@ -1,0 +1,19 @@
+
+
+
+
+STATIC vs NON-STATIC methods:
+- static methods are invoked with the Object/Class/Blueprint template
+- non-static methods are invoked with the instance of the Object/Class/Blueprint template
+
+Math.max(5, 3); // static method
+Number.isInteger(5); // static method
+
+those two are called with their parent object
+
+
+let n1 = 25.55408;
+
+n1.toFixed(2); // 25.55
+
+NON-STATIC: invoking function with data

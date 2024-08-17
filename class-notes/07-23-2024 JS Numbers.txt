@@ -1,0 +1,13 @@
+Number object is more complex than primitive number.
+- It is built-in object
+- It has properties and functions
+
+property = state = field = instance variable
+function = method = behavior
+
+
+JavaScript provides us global functions you can invoke without referencing from any objects.
+
+isNaN
+parseFloat
+parseInt

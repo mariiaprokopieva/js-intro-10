@@ -1,0 +1,30 @@
+
+
+
+RECAP:
+
+GIT: Global Information Tracker
+    We use GIT to push our codes to remote repos and collaborate with other team members or developers/QAs/programmers
+
+GIT is a VCS (Version Control System)
+GIT is a distributed version control System
+
+centralized VCS: we do not prefer this as if server is down or there is no network, we can't push our changes
+distributed VCS: we have a local copy of the server repo and can keep working even though there are issues with server or network
+
+GitHub / GitLab / Bitbucket / Azure DevOps: All hosting tools/apps where we can store our remote repos
+
+SSH: Special type of authentication used instead of username and password
+
+
+HOW TO CLONE AN EXISTING REMOTE REPO TO YOUR LOCAL 
+1. Create a new remote repository
+2. Clone it to your local (BUT make sure you are on the correct path)
+
+
+Branch commands:
+git branch  -> list the existing branches.
+•git branch <branch-name> -> create a new branch with the specified name.
+•git checkout <branch-name>  -> switch to the specified branch
+•git checkout -b <branch-name>  -> create and switch to the created branch.
+•git branch –d <branch-name>  -> delete the specified branch

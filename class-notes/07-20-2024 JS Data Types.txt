@@ -1,0 +1,79 @@
+Recap:
+
+Output statements: console.log()
+This is a pre-built method used to output some data, text to console for debugging purposes.
+
+Debugging: troubleshooting  the program to find issues, logic errors Execute
+
+Escape sequences
+
+With ES6, JS added backticks ` that provide Template Literals
+
+
+DATA TYPES:
+
+Primitive types: basic types that usually stores a piece of information
+7 primitives:
+string: text
+number: number
+BigInt
+Boolean: true | false
+
+
+
+reference types: complex types which can store more information
+arrays, objects, maps...
+
+1. String: a sequence of characters (zero, one or multiple characters)
+''      -> empty string
+' '     -> string
+'123'   -> string
+
+2. Number:
+Whole number = absolute number: 1, 2, 10, 25, 100, 1000
+Decimal number = floating number: 2.5, 10.99, ...
+
+byte: -128, 127
+short: 2 bytes
+int: 4 bytes
+long: 8 bytes
+
+float: 4 bytes up to 15-16 precision
+
+in JS number is used to store all absolute and decimal numbers (8 bytes)
+
+3. BigInt: used to store larger numbers (more than 8 bytes)
+
+
+4. Boolean
+
+= vs == vs ===
+
+=   assignment operator
+==  comparison operator (loose)
+=== comparison operator (strict)
+
+3 == 3      -> true
+3 == '3'    -> true (checks the value only, not the data type )
+3 === '3'   -> false (checks both the value and data type)
+
+'5' === 'five'  -> false
+
+Deprecation
+
+UNDEFINED VS NULL
+
+undefined is  the default type when  you declare a variable but do not provide value
+null is specifically stating that thos variable holds no value. Absence of information.
+
+
+let name = 'Data'
+
+Object data type is used to store key-value pairs, properties
+
+firstName => 'John'
+lastName => 'Doe'
+age => 25
+phoneNumber => '000-000-0000'
+email => 'johndoe@gmail.com'
+password => 'john1234'

@@ -1,0 +1,31 @@
+
+
+
+function: method or behavior of an object-template-class-prototype
+
+
+20 lines of code running a task and you know you will use this code in 
+many programs
+
+In this kind of scenarios it is best to put this 20 lines of code in a
+function
+
+You will be able to call your function anywhere
+
+REUSABLE: one of the biggest advantages of  creating functions.
+Breaking down your program into managable pieces.
+We'll use meaningful identifiers (name) for functions.
+
+
+CREATING A FUNCTION:
+function funcName(arg1, arg2, arg3) {
+    // this is the block of the code
+    return ...; // used for return function
+}
+
+funcName();
+
+
+void: these methods does not return any value
+return-type: these methods returns something
+
