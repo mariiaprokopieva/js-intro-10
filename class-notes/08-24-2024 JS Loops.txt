@@ -1,0 +1,80 @@
+
+
+
+Loops: used to run a block of code many times.
+
+for(let i = 10; i < 20; i++) {
+    // block of code
+}
+
+this block of code runs 10 times
+
+1. for loop:
+initialization
+condition
+update - change
+
+
+Infinite loop: a loop never terminates
+
+for(let i = 10; i > 1; i++) {
+    console.log(i);
+}
+
+for ( ; ; ) {
+    console.log('Hello');
+} 
+this is also infinite loop
+
+2. While loop
+
+while(condition) {
+    // block of code to execute
+}
+
+let written = 1;
+let guess = undefined;
+
+
+while(guess !== written) {
+    guess =getRandomNumber(1,10);
+}
+
+console.log('Numbers finally matched!');
+
+
+for loop        -> 50-60% of the time
+for...of loop   -> 30-40% of the time
+while loop      -> 5-10% of the time
+do...while and for...in loop -> 1-2% of the time
+
+
+for loop        vs      while loop
+
+Do I know how many times this loop exactly run?
+
+    YES                     NO
+for loop                while loop
+
+
+3. Do while loop
+
+
+let i = 5;
+
+while (i < 10) {                
+    console.log(i);
+    i++;
+}
+
+
+
+do {
+    console.log(i);
+    i++;
+}
+while (i > 10)
+
+
+
+

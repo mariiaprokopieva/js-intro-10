@@ -132,21 +132,5 @@ console.log(`The random numbers are = ${ran1} and ${ran2}`);
     }
     else console.log(ran1);
 
-// // Assume that we are playing a game and one person in the class is 
-// just writing a number on a paper and others are trying to guess the 
-// number 
-// •NOTE: number can only be between 1 to 10 ( 1 and 10 are included)
-// •See how many attempts it is going to take to find the number?
-// Write JavaScript program to play the 
-// game  
 
-let r3 = getRandomNumber(1, 10);
-let attempts = 0;
 
-console.log(`The random number is ${r3}`);
-
-for(let i = 1; i <= 10; i++) {
-    attempts++;
-}
-
-console.log(attempts);
