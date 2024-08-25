@@ -281,8 +281,16 @@ const arr = [ 10.5, 20.75, 70, 80, 15.75 ];
 
 console.log(arr);
 
+console.log('\n------------------1st solution------------------\n');
+
 for (let i = 0; i <= arr.length - 1; i++) {
     console.log(arr[i]);
+}
+
+console.log('\n------------------2nd solution------------------\n');
+
+for(element of arr) {
+    console.log(element);
 }
 
 /*Requirement:
@@ -306,6 +314,8 @@ const arr12 = [ 'Pen', 'notebook', 'Book', 'paper', 'bag', 'pencil', 'Ruler' ];
 
 console.log(arr12);
 
+console.log('\n------------------1st solution------------------\n');
+
 let count1 = 0;
 
 for (let i = 0; i <= arr12.length - 1; i++) {
@@ -320,6 +330,24 @@ let count2 = 0;
 for (let i = 0; i <= arr12.length - 1; i++) {
     let element = arr12[i].toLowerCase();
     if (element.includes('book') || element.includes('pen')) count2++; 
+}
+
+console.log(`Elements having 'book' or 'pen' = ${count2}`);
+
+console.log('\n------------------2nd solution------------------\n');
+
+count1 = 0;
+
+for(element of arr12) {
+    if ('bBpP'.includes(element[0])) count1++;
+}
+
+console.log(`Elements starting with 'B' or 'P' = ${count1}`);
+
+count2 = 0;
+
+for(element of arr12) {
+    if (element.toLowerCase().includes('book') || element.toLowerCase().includes('pen')) count2++;
 }
 
 console.log(`Elements having 'book' or 'pen' = ${count2}`);
@@ -350,6 +378,8 @@ console.log(arr13);
 
 let n1 = 0, n2 = 0, n3 = 0;
 
+console.log('\n------------------1st solution------------------\n');
+
 for (let i = 0; i <= arr13.length - 1; i++) {
     if(arr13[i] > 10) n1++;
     if(arr13[i] < 10) n2++;
@@ -359,6 +389,22 @@ for (let i = 0; i <= arr13.length - 1; i++) {
 console.log(`Elements that are more than 10 = ${n1}
 Elements that are less than 10 = ${n2}
 Elements that are 10 = ${n3}`);
+
+console.log('\n------------------2nd solution------------------\n');
+
+n1 = 0;
+n2 = 0;
+n3 = 0;
+
+for(number of arr13) {
+    if(number > 10) n1++;
+    if(number < 10) n2++;
+    if(number === 10) n3++;
+}
+
+console.log(`Elements that are more than 10 = ${n1}
+    Elements that are less than 10 = ${n2}
+    Elements that are 10 = ${n3}`);
 
 /*
 Requirement:
@@ -384,12 +430,13 @@ const secondArr = [ 9, 3, 67, 1, 0 ];
 console.log('1st array is = ', firstArr);
 console.log('2nd array is = ', secondArr);
 
-const thirdArr = [];
+let thirdArr = [];
 for (let i = 0; i <= firstArr.length - 1; i++) {
     thirdArr[i] = Math.max(firstArr[i], secondArr[i]);
 }
 
 console.log('3rd array is = ', thirdArr);
+
 
 /*
 Requirement:
