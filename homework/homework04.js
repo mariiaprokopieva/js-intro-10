@@ -438,7 +438,7 @@ console.log('\n------------------TASK16------------------\n');
 
 function getDuplicates(arr) {
 
-    let arrDuplicates = [];
+    const arrDuplicates = [];
 
     for (let i = 0; i <= arr.length - 1; i++) {
         for (let j = 1; j <= arr.length - 1; j++) {
@@ -465,3 +465,114 @@ reverseStringWords("") 			-> ""
 reverseStringWords("    ") 		-> ""
 */
 
+console.log('\n------------------TASK17------------------\n');
+
+function reverseStringWords(str) {
+    
+    const wordsArray = str.split(' '); // [i, like, Javascript]
+    let lettersArray = [];
+
+    for (let i = 0; i <= wordsArray.length - 1; i++) {
+        lettersArray = wordsArray[i].split(''); 
+        wordsArray[i] = lettersArray.reverse().join('');
+    }
+    return wordsArray.join(' ');
+} 
+
+/*
+Requirement:
+Write a function named as getEvens() which takes 2 number arguments and returns all the even numbers as an array stored from smallest even number to greatest even number when invoked.
+NOTE: Make your code dynamic that works for any numbers and return empty array if there are no even numbers in the range of given 2 numbers. 
+Assume you will not be given negative numbers.
+
+Examples:
+getEvens(2, 7)	-> [ 2, 4, 6 ]
+getEvens(17, 5)	-> [ 6, 8, 10, 12, 14, 16 ]
+getEvens(4, 4)	-> [ 4 ]
+getEvens(3, 3)	-> [ ]
+*/
+
+console.log('\n------------------TASK18------------------\n');
+
+function getEvens(n1, n2) {
+    
+    let min = Math.min(n1, n2);
+    let max = Math.max(n1, n2);
+
+    let array = [];
+
+    for (let i = min; i <= max; i++) {
+        if (i % 2 === 0) array.push(i);
+    }
+    return array;
+}
+
+/*
+Requirement:
+Write a function named as getMultipleOf5() which takes 2 number arguments and returns all the numbers divisible by 5 as an array stored from first found match to last found match when invoked.
+NOTE: Make your code dynamic that works for any numbers and return empty array if there are no numbers divisible by 5 in the range of given 2 numbers. 
+Assume you will not be given negative numbers.
+
+Examples:
+getMultipleOf5(3, 17)	-> [ 5, 10, 15]
+getMultipleOf5(23, 5)	-> [ 20, 15, 10, 5 ]
+getMultipleOf5(5, 5)	-> [ 5 ]
+getMultipleOf5(2, 4)	-> [ ]
+*/
+
+console.log('\n------------------TASK19------------------\n');
+
+function getMultipleOf5(n1, n2) {
+
+    let array = [];
+
+    if (n1 < n2) {
+        for (let i = n1; i <= n2; i++) {
+            if (i % 5 === 0) array.push(i);
+        }
+    }
+    else {
+        for (let i = n1; i >= n2; i--) {
+            if (i % 5 === 0) array.push(i);
+        }
+    }
+    return array;
+}
+
+/*
+Requirement:
+Write a function named as fizzBuzz() which takes 2 number arguments and returns a string composed with below requirements when invoked.
+You need to find all the numbers within the range of given 2 numbers (both inclusive) and store them in a string from smallest to greatest number with a ' | ' separator for each number.
+You will need to convert numbers divisible by 3 to 'Fizz'
+You will need to convert numbers divisible by 5 to 'Buzz'
+You will need to convert numbers divisible by both 3 and 5 to 'FizzBuzz’
+The rest will stay the same.
+NOTE: Make your code dynamic that works for any numbers.
+Assume you will not be given negative numbers.
+
+Examples:
+fizzBuzz(13, 18)	-> "13 | 14 | FizzBuzz | 16 | 17 | Fizz" 
+fizzBuzz(12, 5)	-> "Buzz | Fizz | 7 | 8 | Fizz | Buzz | 11 | Fizz"
+fizzBuzz(5, 5)	-> "Buzz"
+fizzBuzz(9, 6)	-> "Fizz | 7 | 8 | Fizz"
+*/
+
+console.log('\n------------------TASK20------------------\n');
+
+function fizzBuzz(n1, n2) {
+    
+    let min = Math.min(n1, n2);
+    let max = Math.max(n1, n2);
+
+    let array = [];
+
+    for (let i = min; i <= max; i++) {
+        if (i % 3 === 0) {
+            if (i % 5 === 0) array.push('FizzBuzz');
+            else array.push('Fizz');
+        }
+        else if (i % 5 === 0) array.push('Buzz');
+        else array.push(i);
+    }
+    return array.join(' | ');
+}
