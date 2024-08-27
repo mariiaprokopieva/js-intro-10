@@ -430,13 +430,12 @@ const secondArr = [ 9, 3, 67, 1, 0 ];
 console.log('1st array is = ', firstArr);
 console.log('2nd array is = ', secondArr);
 
-let thirdArr = [];
+const thirdArr = [];
 for (let i = 0; i <= firstArr.length - 1; i++) {
     thirdArr[i] = Math.max(firstArr[i], secondArr[i]);
 }
 
 console.log('3rd array is = ', thirdArr);
-
 
 /*
 Requirement:
@@ -467,6 +466,16 @@ function firstDuplicate(arr) {
     return -1;
 }
 
+console.log('\n------------------2nd solution------------------\n');
+
+function firstDuplicate2(arr) {
+
+    for (let i = 0; i < arr.length - 1; i++) {
+        if (arr.includes(arr[i], i + 1)) return arr[i];  
+    }
+    return -1;
+}
+
 
 /*
 Requirement:
@@ -483,6 +492,8 @@ getDuplicates([ 'foo', '12' , 12, 'bar', 'a' ])		-> [ ]
 
 console.log('\n------------------TASK16------------------\n');
 
+console.log('\n------------------1st solution------------------\n');
+
 function getDuplicates(arr) {
 
     const arrDuplicates = [];
@@ -497,6 +508,7 @@ function getDuplicates(arr) {
 }
 
 console.log(getDuplicates(['foo', '12' , 12, 'bar', 'a' ]));
+
 
 /*
 Requirement:
@@ -517,7 +529,7 @@ console.log('\n------------------TASK17------------------\n');
 function reverseStringWords(str) {
     
     const wordsArray = str.split(' '); // [i, like, Javascript]
-    let lettersArray = [];
+    let lettersArray;
 
     for (let i = 0; i <= wordsArray.length - 1; i++) {
         lettersArray = wordsArray[i].split(''); 
@@ -546,7 +558,7 @@ function getEvens(n1, n2) {
     let min = Math.min(n1, n2);
     let max = Math.max(n1, n2);
 
-    let array = [];
+    const array = [];
 
     for (let i = min; i <= max; i++) {
         if (i % 2 === 0) array.push(i);
@@ -571,7 +583,7 @@ console.log('\n------------------TASK19------------------\n');
 
 function getMultipleOf5(n1, n2) {
 
-    let array = [];
+    const array = [];
 
     if (n1 < n2) {
         for (let i = n1; i <= n2; i++) {
