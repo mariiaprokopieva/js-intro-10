@@ -476,7 +476,6 @@ function firstDuplicate2(arr) {
     return -1;
 }
 
-
 /*
 Requirement:
 Write a function named as getDuplicates() which takes an array argument and returns all the duplicated elements in the array when invoked.
@@ -507,8 +506,17 @@ function getDuplicates(arr) {
     return arrDuplicates;
 }
 
-console.log(getDuplicates(['foo', '12' , 12, 'bar', 'a' ]));
+console.log('\n------------------2nd solution------------------\n');
 
+arrDuplicates = [];
+
+function getDuplicates2(arr) {
+
+    for (let i = 0; i < arr.length - 1; i++) {
+        if (arr.includes(arr[i], i + 1) && !arrDuplicates.includes(arr[i])) arrDuplicates.push(arr[i]);  
+    }
+    return arrDuplicates;
+}
 
 /*
 Requirement:
