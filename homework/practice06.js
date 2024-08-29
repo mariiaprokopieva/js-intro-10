@@ -202,3 +202,5 @@ console.log(commonElements([ 10, 20, 30, 50, 70 ], [ 20, 50, 70 ]));
 console.log(commonElements([ 30, 50, 70 ], [ 20, 100, 300 ]));
 console.log(commonElements( ["30", "abc", "hi" ], [ 30, "Hi", "abc" ]));
 
+
+

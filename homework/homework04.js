@@ -536,7 +536,7 @@ console.log('\n------------------TASK17------------------\n');
 
 function reverseStringWords(str) {
     
-    const wordsArray = str.split(' '); // [i, like, Javascript]
+    const wordsArray = str.trim().split(' '); // [i, like, Javascript]
     let lettersArray;
 
     for (let i = 0; i <= wordsArray.length - 1; i++) {
@@ -545,6 +545,8 @@ function reverseStringWords(str) {
     }
     return wordsArray.join(' ');
 } 
+
+
 
 /*
 Requirement:

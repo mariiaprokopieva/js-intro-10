@@ -1,0 +1,32 @@
+
+
+
+
+Object: a collection of properties
+property: key + value
+
+let name = 'John';
+let age = 25;
+let city = 'Chicago';
+
+const person = {
+    name: 'John',
+    age: 25,
+    city: 'Chicago',
+    isAlive: true,
+    favMov: [ 'Matrix', 'Amelia', 'Titanic' ],
+    kids; [
+        {
+            name: 'Alex',
+            age: 3
+        }
+    ]
+}
+
+DEFAULT:
+empty string, array, Object
+''
+[]
+{}
+number: 0
+boolean: false

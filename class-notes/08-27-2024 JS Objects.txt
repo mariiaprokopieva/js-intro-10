@@ -1,0 +1,29 @@
+
+
+RECAP:
+
+Object: reference data type and store data in key-value pairs
+Object properties are not index based.
+Object properties can be accessed, updated, deleted using the keys.
+
+
+*** keys are by default strings and UNIQUE!!!
+*** values can be of any type and duplicates.
+
+
+const obj1 = {};
+const obj2 = new Object();
+
+// creating a property
+obj2.name = 'afadf';
+
+// updating a property
+obj2.name = 'afadfdfdf';
+
+// deleting a property
+delete obj2.name;
+
+Built-in Object static method
+Object.keys() -> takes an object variable as an argument and returns all the keys as an array
+Object.values() -> takes an object variable as an argument and returns all the values as an array
+Object.entries() -> takes an object variable as an argument and returns all the key-values as a nested array

@@ -41,3 +41,4 @@ numbers.shift();
 numbers.shift();
 numbers.shift();
 console.log(numbers.shift()); // undefined
+
