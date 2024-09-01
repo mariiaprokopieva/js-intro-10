@@ -455,13 +455,10 @@ console.log('\n------------------TASK15------------------\n');
 
 console.log('\n------------------1st solution------------------\n');
 
-function firstDuplicate(arr) {
+function firstDuplicate1(arr) {
 
-    for (let i = 0; i <= arr.length - 1; i++) {
-        for (let j = i + 1; j <= arr.length - 1; j++) {
-            if (i === j) continue;
-            if (arr[i] === arr[j]) return arr[i]; 
-        }
+    for (let i = 0; i < arr.length - 1; i++) {
+        if (arr.includes(arr[i], i + 1)) return arr[i];  
     }
     return -1;
 }
@@ -470,8 +467,11 @@ console.log('\n------------------2nd solution------------------\n');
 
 function firstDuplicate2(arr) {
 
-    for (let i = 0; i < arr.length - 1; i++) {
-        if (arr.includes(arr[i], i + 1)) return arr[i];  
+    for (let i = 0; i <= arr.length - 1; i++) {
+        for (let j = i + 1; j <= arr.length - 1; j++) {
+            if (i === j) continue;
+            if (arr[i] === arr[j]) return arr[i]; 
+        }
     }
     return -1;
 }
