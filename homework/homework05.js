@@ -232,7 +232,7 @@ countMultipleWords([ ]) 					-> 0
 
 console.log('\n------------------TASK08------------------\n');
 
-onsole.log('\n------------------1st solution------------------\n');
+console.log('\n------------------1st solution------------------\n');
 
 const countMultipleWords1 = (arr) => {
     return arr.map(x => x.trim()).reduce((acc, curr) => curr.indexOf(' ') !== -1 ? acc + 1 : acc, 0);
@@ -456,6 +456,8 @@ isEmailValid("johndoe@gmail.com") 		-> true
 
 console.log('\n------------------TASK14------------------\n');
 
+console.log('\n------------------1st solution------------------\n');
+
 const isEmailValid = (str) => {
     return /^([A-Za-z0-9._%-]{2,}@[a-zA-Z0-9.-]{2,}\.[a-zA-Z]{2,})$/.test(str);
 }
@@ -468,6 +470,26 @@ console.log(isEmailValid("a@outlook.com"));
 console.log(isEmailValid("johndoe@a.com"));
 console.log(isEmailValid("johndoe@@gmail.com"));
 console.log(isEmailValid("johndoe@gmail.com"));
+
+console.log('\n------------------2nd solution------------------\n');
+
+const isEmailValid2 = (str) => {
+    if(str.includes(' ') || str.indexOf('@') !== str.lastIndexOf('@') || !str.includes('@')) return false;
+    else {
+        let beforeAt = str.slice(0, str.indexOf('@'));
+        let afterAtBeforeDot = str.slice(str.indexOf('@') + 1, str.lastIndexOf('.'));
+        let afterDot = str.slice(str.lastIndexOf('.') + 1);
+
+        if(beforeAt.length >= 2 && afterAtBeforeDot >= 2 && afterDot >= 2) {
+            return  true;
+        }
+        else {
+            return false;
+        }
+    }
+}
+
+console.log(isEmailValid2('!#$@!^^.!^'));
 
 /*Requirement: 
 Write a function named as isPasswordValid() which takes a string email as an argument and returns true if the password is valid or returns false otherwise when invoked.
@@ -488,14 +510,14 @@ isPasswordValid("Chicago123$") 		-> true
 isPasswordValid("Test1234#") 		-> true
 */
 
-console.log('\n------------------TASK15------------------\n'); // DOESN'T WORK
+console.log('\n------------------TASK15------------------\n'); 
 
 const isPasswordValid = (str) => {
     if (str.length < 8 || str.length > 16) return false;
     else if (!/\d/.test(str)) return false;
     else if (!/[A-Z]/.test(str)) return false;
     else if (!/[a-z]/.test(str)) return false;
-    else if (!/\!\/\^\_\=\!\#\$\%\&\(\)\*\+\,\-\.\:\'\/\?\@\"/.test(str)) return false;
+    else if (!/[!-/:-@]/.test(str)) return false;
     else if(str.includes(' ')) return false;
     else return true;
 }
