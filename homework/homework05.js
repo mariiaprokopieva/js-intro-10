@@ -414,7 +414,7 @@ findClosestTo10([0, -1, -2]) 		-> 0
 
 console.log('\n------------------TASK13------------------\n'); 
 
-function findClosestTo10(arr) {
+const findClosestTo10 = arr => {
     let closestTo10 = Infinity; 
     for (let i = 0; i < arr.length; i++) { 
        if (arr[i] === 10) continue; 
@@ -512,6 +512,8 @@ isPasswordValid("Test1234#") 		-> true
 
 console.log('\n------------------TASK15------------------\n'); 
 
+console.log('\n------------------1st solution------------------\n');
+
 const isPasswordValid = (str) => {
     if (str.length < 8 || str.length > 16) return false;
     else if (!/\d/.test(str)) return false;
@@ -531,5 +533,56 @@ console.log(isPasswordValid("Chicago12345US!#$%"));
 console.log(isPasswordValid("Abcd1234$"));
 console.log(isPasswordValid("Chicago123$"));
 console.log(isPasswordValid("Test1234#"));
+
+console.log('\n------------------2nd solution------------------\n');
+
+const isPasswordValid2 = pass => {
+    if(pass.length < 8 || pass.length > 16 || pass.includes(' ')) return false;
+
+    let hasUpperCase = false;
+    let hasLowerCase = false;
+    let hasDigit = false;
+    let hasSpecial = false;
+
+    for(let char of pass) {
+        if(char >= 'a' && char <= 'z') hasLowerCase = true;
+        else if(char >= 'A' && char <= 'Z') hasUpperCase = true;
+        else if(char >= '0' && char <= '9') hasDigit = true;
+        else hasSpecial = true;
+    }
+    return hasUpperCase && hasLowerCase && hasDigit && hasSpecial;
+}
+
+console.log(isPasswordValid2(""));
+console.log(isPasswordValid2("abcd"));
+console.log(isPasswordValid2("abcd1234"));
+console.log(isPasswordValid2("Abcd1234"));
+console.log(isPasswordValid2("Chicago12345US!#$%"));
+console.log(isPasswordValid2("Abcd1234$"));
+console.log(isPasswordValid2("Chicago123$"));
+console.log(isPasswordValid2("Test1234#"));
+
+console.log('\n------------------3rd solution------------------\n');
+
+const isPasswordValid3 = pass => {
+    if(pass.length < 8 || pass.length > 16 || pass.includes(' ')) return false;
+
+    if(pass.split('').filter(ele => ele >= 'A' && ele <= 'Z').length === 0) return false;
+    if(pass.split('').filter(ele => ele >= 'a' && ele <= 'z').length === 0) return false;
+    if(pass.split('').filter(ele => ele >= '0' && ele <= '9').length === 0) return false;
+    if(pass.split('').filter(ele => (ele < 'a' || ele > 'z') && (ele < 'A' || ele > 'Z') && (ele < '0' || ele > '9').length === 0)) return false;
+
+    return true;
+}
+
+
+console.log(isPasswordValid3(""));
+console.log(isPasswordValid3("abcd"));
+console.log(isPasswordValid3("abcd1234"));
+console.log(isPasswordValid3("Abcd1234"));
+console.log(isPasswordValid3("Chicago12345US!#$%"));
+console.log(isPasswordValid3("Abcd1234$"));
+console.log(isPasswordValid3("Chicago123$"));
+console.log(isPasswordValid3("Test1234#"));
 
 
