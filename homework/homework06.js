@@ -86,9 +86,8 @@ console.log(hasVowel("ABC"));
 
 console.log('\n------------------2nd solution------------------\n');
 
-const hasVowel2 = str => {
-    return str.search(/[aeiou]/i) !== -1;
-}
+const hasVowel2 = str => str.search(/[aeiou]/i) !== -1;
+
 
 console.log(hasVowel2(""));
 console.log(hasVowel2("Javascript"));
