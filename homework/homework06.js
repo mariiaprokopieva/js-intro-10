@@ -241,18 +241,14 @@ removeDuplicates(["1", "2", "3", "2", "3"]) 		-> ["1", "2", "3"]
 */
 
 console.log('\n------------------TASK09------------------\n'); 
-
+    
 const removeDuplicates = arr => {
     let result = [];
     for (let i = 0; i < arr.length; i++) {
-        for (let j = 0; j < arr.length; j++) {
-            if (i === j) continue;
-            if (arr[i] !== arr[j] && !result.includes(arr[i])) result.push(arr[i]) ; 
-        }
+        if(!result.includes(arr[i])) result.push(arr[i]);
     }
     return result;
 }
-    
 
 console.log(removeDuplicates([7, 4, 4, 4, 23, 23, 23]));
 console.log(removeDuplicates([1, 2, 5, 2, 3]));
