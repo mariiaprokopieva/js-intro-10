@@ -411,7 +411,7 @@ const mostRepeated = arr => {
     arr.sort();
     let count = 0;
     for(const x of arr) {
-        if(arr.slice(arr.indexOf(x), arr.lastIndexOf(x) + 1).length > count) count = aincluderr.slice(arr.indexOf(x), arr.lastIndexOf(x) + 1).length;
+        if(arr.slice(arr.indexOf(x), arr.lastIndexOf(x) + 1).length > count) count = arr.slice(arr.indexOf(x), arr.lastIndexOf(x) + 1).length;
     }
     for(const x of arr) {
         if(arr.slice(arr.indexOf(x), arr.lastIndexOf(x) + 1).length === count) return x;
