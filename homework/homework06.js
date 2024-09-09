@@ -327,7 +327,7 @@ console.log('\n------------------1st solution------------------\n');
 const secondMax = arr => {
     if(arr.length === 1) return arr[0];
     arr.sort((a,b) => b - a);
-    return arr[arr.lastIndexOf(Math.max(...arr)) + 1];
+    return arr[arr.lastIndexOf(arr[0]) + 1];
 }
 
 console.log(secondMax([7, 4, 4, 4, 23, 23, 23]));
@@ -370,7 +370,7 @@ console.log('\n------------------1st solution------------------\n');
 const secondMin = arr => {
     if(arr.length === 1) return arr[0];
     arr.sort((a,b) => a - b);
-    return arr[arr.lastIndexOf(Math.min(...arr)) + 1];
+    return arr[arr.lastIndexOf(arr[0]) + 1];
 }
 
 console.log(secondMin([7, 4, 4, 4, 23, 23, 23]));
