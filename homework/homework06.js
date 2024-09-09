@@ -322,7 +322,21 @@ secondMax([10]) 		-> 10
 
 console.log('\n------------------TASK11------------------\n');
 
+console.log('\n------------------1st solution------------------\n');
+
 const secondMax = arr => {
+    if(arr.length === 1) return arr[0];
+    arr.sort((a,b) => b - a);
+    return arr[arr.lastIndexOf(Math.max(...arr)) + 1];
+}
+
+console.log(secondMax([7, 4, 4, 4, 23, 23, 23]));
+console.log(secondMax([3, 4, 5, 6]));
+console.log(secondMax([10]));
+
+console.log('\n------------------2nd solution------------------\n');
+
+const secondMax2 = arr => {
     if(arr.length === 1) return arr[0];
     let max = Math.max(...arr);
     while(arr.includes(max)) {
@@ -351,7 +365,21 @@ secondMin([10]) 		-> 10
 
 console.log('\n------------------TASK12------------------\n');
 
+console.log('\n------------------1st solution------------------\n');
+
 const secondMin = arr => {
+    if(arr.length === 1) return arr[0];
+    arr.sort((a,b) => a - b);
+    return arr[arr.lastIndexOf(Math.min(...arr)) + 1];
+}
+
+console.log(secondMin([7, 4, 4, 4, 23, 23, 23]));
+console.log(secondMin([3, 4, 5, 6]));
+console.log(secondMin([10]));
+
+console.log('\n------------------2nd solution------------------\n');
+
+const secondMin2 = arr => {
     if(arr.length === 1) return arr[0];
     let min = Math.min(...arr);
     while(arr.includes(min)) {
@@ -383,7 +411,7 @@ const mostRepeated = arr => {
     arr.sort();
     let count = 0;
     for(const x of arr) {
-        if(arr.slice(arr.indexOf(x), arr.lastIndexOf(x) + 1).length > count) count = arr.slice(arr.indexOf(x), arr.lastIndexOf(x) + 1).length;
+        if(arr.slice(arr.indexOf(x), arr.lastIndexOf(x) + 1).length > count) count = aincluderr.slice(arr.indexOf(x), arr.lastIndexOf(x) + 1).length;
     }
     for(const x of arr) {
         if(arr.slice(arr.indexOf(x), arr.lastIndexOf(x) + 1).length === count) return x;
@@ -394,3 +422,4 @@ console.log(mostRepeated([4, 7, 4, 4, 4, 23, 23, 23]));
 console.log(mostRepeated(["pen", "pencil", "pen", "123", "abc", "pen", "pencil"]));
 console.log(mostRepeated([10]));
 console.log(mostRepeated(["TechGlobal"]));
+
