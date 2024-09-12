@@ -367,7 +367,7 @@ const add = (arr1, arr2) => {
     for(let i = 0; i < max; i++) {
         arr1[i] === undefined ? arr1.push(0) : arr1[i];
         arr2[i] === undefined ? arr2.push(0) : arr2[i];
-        result[i] = arr1[i] + arr2[i]
+        result[i] = arr1[i] + arr2[i];
     }
     return result;
 }

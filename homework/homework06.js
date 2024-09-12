@@ -278,12 +278,13 @@ console.log('\n------------------TASK10------------------\n');
 const isDateFormatValid = str => {
     str = str.trim();
 
+    if(str.length !== 10) return false;
+    if(str.indexOf('/') === -1 || str.indexOf('/') === str.lastIndexOf('/')) return false;
+
     let month = str.slice(0, str.indexOf('/'));
     let day = str.slice(str.indexOf('/') + 1, str.lastIndexOf('/'));
     let year = str.slice(str.lastIndexOf('/') + 1);
-
-    if(str.length !== 10) return false;
-    if(str.indexOf('/') === -1 || str.indexOf('/') === str.lastIndexOf('/')) return false;
+    
     if(month.length !== 2 || day.length !== 2 || year.length !== 4) return false;
 
     let strNumbers = str.replaceAll('/', '');

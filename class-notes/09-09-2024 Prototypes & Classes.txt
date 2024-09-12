@@ -1,0 +1,29 @@
+
+
+
+constructor: it is a special method o function used to create objects of the prototype/class
+
+- An ES6 class can have only one constructor
+- If we do not create a custom constructor, JavaScript will provide us the default constractor
+
+
+Class members: properties, constructors, functions
+
+INHERITANCE: common concept used in all programming languages
+It increases code reusability by child classed from parent classes
+Public properties, functions and constructors of the pareant classes can be iherited
+Private properties and functions in parent classes cannot be inherited
+Parent cannot inherit from child
+one child class can have ONLY one parent
+one parent class can have multiple child classes
+
+class A extends B {
+
+}
+
+class C extends A {
+    
+}
+
+A is the child class
+B is the parent class
