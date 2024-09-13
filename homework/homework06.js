@@ -326,14 +326,13 @@ console.log('\n------------------TASK11------------------\n');
 console.log('\n------------------1st solution------------------\n');
 
 const secondMax = arr => {
-    if(arr.length === 1) return arr[0];
     arr.sort((a,b) => b - a);
-    return arr[arr.lastIndexOf(arr[0]) + 1];
+    return arr[arr.lastIndexOf(arr[0]) + 1] || arr[0];
 }
 
 console.log(secondMax([7, 4, 4, 4, 23, 23, 23]));
 console.log(secondMax([3, 4, 5, 6]));
-console.log(secondMax([10]));
+console.log(secondMax([10, 10]));
 
 console.log('\n------------------2nd solution------------------\n');
 
@@ -373,6 +372,8 @@ const secondMin = arr => {
     arr.sort((a,b) => a - b);
     return arr[arr.lastIndexOf(arr[0]) + 1];
 }
+
+arr.sort()
 
 console.log(secondMin([7, 4, 4, 4, 23, 23, 23]));
 console.log(secondMin([3, 4, 5, 6]));
@@ -424,3 +425,23 @@ console.log(mostRepeated(["pen", "pencil", "pen", "123", "abc", "pen", "pencil"]
 console.log(mostRepeated([10]));
 console.log(mostRepeated(["TechGlobal"]));
 
+const mostRepeated2 = arr => {
+    let count = {};
+    let mostRepeated;
+    let mostRepeatedCount = 0;
+
+    for(let ele of arr) {
+        if(count[ele]) count[ele]++;
+        else count[ele] = 1;
+
+        if(count[ele] > mostRepeatedCount) {
+            mostRepeatedCount = count[ele];
+            mostRepeated = ele;
+        }
+    }
+    return mostRepeated;
+}
+
+console.log(mostRepeated2([4, 7, 4, 4, 4, 23, 23, 23]));
+
+console.log(Number('gf') > 1);
