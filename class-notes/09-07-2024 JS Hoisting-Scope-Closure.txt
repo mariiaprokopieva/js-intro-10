@@ -6,7 +6,7 @@
 Hoisting: using functions and variables before they are declared
 
 Function declarations will be hoisted
-Arrow functions and function expressions are not hoisted, you can not use thi before their initialization
+Arrow functions and function expressions are not hoisted, you can not use them before their initialization
 
 var is hoisted, let and const are not hoisted
 var-let-const respect the global and function scope

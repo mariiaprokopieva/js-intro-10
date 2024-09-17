@@ -1,0 +1,123 @@
+
+
+
+09-14-2024 JS Static & Asynx Intro
+
+RECAP: 
+
+OOP: Object-Oriented Programming
+OOP Languages: C++, C#, Java
+Prototype-based Languages: JavaScript, Python
+
+
+JS started to implement OOP concepts with ES6 by adding classes.
+
+OOP Concepts/Principles
+Encapsulation: making class properties/fields/instance variables/states private and providing public getters and setters
+Inheritance: this concept is used to b uild parent-child relationship between classes to increase reusability. Child can use parent properties/constructors and methods
+Abstraction: it is providing abstract methods (which has no body) and child class must provide the body
+Polymorphism: One object being able to get into many shapes.
+
+
+class Book {
+    constructor(title, page) {
+        this.title = title;
+        this.page = page;
+    }
+
+    getTitle() {
+        return this.title;
+    }
+
+    setTitle(newTitle) {
+        this.title = newTitle;
+    } 
+}
+
+
+const book1 = new Book('Amok', 60);
+
+// direct access
+book1.title;
+book1.page;
+
+book1.title = 'Hello';
+
+// Encapsulation
+book1.getTitle();
+book1.setTitle('Hello');
+
+
+// Abstraction
+class Fruit {
+taste(); // no body/implementation
+}
+
+class Apple extends Fruit {
+taste() {
+    //provide body
+}
+}
+
+
+Polymorphism:
+const apple1 = new Apple();
+
+apple1 is an Apple object
+apple1 is a Fruit object
+
+Prototype: Prototypes are the mechanisms by which JavaScript objects inherit features from one another.
+
+ES6 classes: ES6 classes are blueprints from where many objects can be instantiated.
+
+Inheritance: Being able to inherit and reuse parent prototype or class method-constructor-properties.
+1. Prototypical inheritance (__proto__)
+2. ES6 class inheritance (extends)
+
+static properties and methods cannot be accessed with object variables
+non-static properties and methods cannot be accessed with the class name
+
+
+Synchronous vs Asynchronous 
+
+// Synchronous code
+console.log('1');
+console.log('2');
+console.log('3');
+
+setTimeOut(callback, milliseconds); // This is a built-in function used to delay execution of inner callback function
+
+setTimeout(() => {
+    console.log('Hello');
+}, 10000);
+
+// delaying execution by 10 seconds
+
+
+TEST CASE 
+1. Navigate to https://techglobal-training.com/frontend/project-2
+2. Enter the username as “TechGlobal”
+3. Enter the password as “Test1234”
+4. Click on the “LOGIN” button
+5. Validate the success message is displayed as “You are logged in”
+
+console.log('VISIT URL');
+console.log('ENTER USERNAME');
+console.log('ENTER PASSWORD');
+console.log('CLICK LOGIN');
+console.log('VALIDATE');
+
+
+3 WAYS TO RESOLVE ASYNCHRONOUS code
+1. callbacks (Before ES6)
+2. promises (After ES6)
+3. Async-Await (After ES6 and a little bit more improved version of promises)
+
+PROMISE: 
+fullfilled
+rejected
+pending
+
+visit(url): promising to visit url
+login(username, password): promising log in functionality
+validate(text): promising to show the expected text
