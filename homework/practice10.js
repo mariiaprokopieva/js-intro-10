@@ -140,3 +140,4 @@ console.log(player1.getInfo());
 console.log(player2.getInfo());
 console.log(superPlayer.getInfo());
 console.log(heroPlayer.getInfo());
+

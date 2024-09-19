@@ -63,8 +63,8 @@ Deprecation
 
 UNDEFINED VS NULL
 
-undefined is  the default type when  you declare a variable but do not provide value
-null is specifically stating that thos variable holds no value. Absence of information.
+undefined is the default type when you declare a variable but do not provide value
+null is specifically stating that this variable holds no value. Absence of information.
 
 
 let name = 'Data'
