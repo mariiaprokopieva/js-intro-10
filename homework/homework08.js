@@ -210,7 +210,7 @@ const noXInVariables = arr => {
     const result = [];
     for(const x of arr) {
         if(typeof(x) === 'string' && x.toLowerCase().includes('x')) {
-            if(x.toLowerCase().split('').filter(y => y !== 'x').length !== 0) result.push(x.toLowerCase().split('').filter(y => y !== 'x').join(''));
+            if(!x.toLowerCase().split('').every(x => x === 'x')) result.push(x.toLowerCase().split('').filter(y => y !== 'x').join(''));
         }
         else result.push(x);  
     }
