@@ -1,0 +1,119 @@
+
+
+
+09-21-2024 JS Modules
+
+1. Common JS Modules
+module.exports and require()
+
+2. ES6 Modules
+export and import: supported by all the browsers
+
+Both of them are used a lot, 50/50
+
+HOW TO RUN JS CODE?
+-NodeJS
+-Browser
+-Extensions (you'll never use this in work environment)
+
+Static methods and properties can be accessed with the className, while non-static properties and methods can be accessed with the object of the class
+class Apple {
+    static propertyA = 'Hi';
+    propertyB = 'Hello';
+
+    static funcA() {
+        console.log('I am static');
+    }
+
+    funcB() {
+        console.log('I am NOT static');
+    }
+}
+
+// Accessing static properties and methods
+Apple.propertyA; // 'Hi'
+Apple.funcA(); // 'I am static'
+
+const a1 = new Apple();
+a1.funcB(); // 'I am NOT static'
+
+
+If the method executes the same task for every single object of the class, it makes sense to use static method.
+
+class Batch10Student {
+    constructor(fullname, age) {
+        this.fullname = fullname;
+        this.age = age;
+    }
+
+    getProgramName() {
+        return 'SDET';
+    }
+
+    static getFullName() {
+        return this.fullname;
+    }
+
+    const Bermet = new Batch10Student('Bermet S', 20);
+
+    bermet.getFullname();
+}
+
+class AppleStore {
+    constructor(id, city, state, zip) {
+        this.id = id;
+        this.city = city;
+        this.state = state;
+        this.zip = zip;
+    }
+
+    static getIphone16ProMaxPrice() {
+        
+    }
+
+
+}
+
+
+
+HTML - HyperText MarkUp Language
+It is not a programming language because you cannot create functions with it.
+
+
+Web Application: anything you visit on a browser is a web application
+Mobile Application: any application on your phone from App Store or Google Play
+Hybrid Application: You can use on web and install on your mobile devices
+
+Desktop Application: Robot Framework (Python) - testing
+
+Web Application: consists of many web-pages
+
+home page/dashboard/landing page
+
+Every time url changes, you are on a new page
+
+Each web page is created using HTML
+Whether it's a button, image, paragraph - they're all web elements
+
+How do you represent an element of the web-page?
+
+Each web element is represented by an HTML tag
+<p></p>
+<img/>
+<div></div>
+
+<button>Apply Now</button>
+
+Opening tag: <button>
+Closing tag: </button>
+Opening and closing tag / self closing tag: <img/>
+
+Every tag has a lot of attributes
+
+Tags may have many properties/attributes
+<tagName>VISIBLE TEXT</tagName>
+
+Attributes are added as key-value pairs to the opening tag.
+
+<tagName attr1="value1" attr2="value2">TEXT</tagName>
+

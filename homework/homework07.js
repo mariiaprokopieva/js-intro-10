@@ -116,7 +116,7 @@ middleInt(-1, 25, 10) 	-> 10
 console.log('\n------------------TASK05------------------\n');
 
 const middleInt = (n1, n2, n3) => {
-    return [n1, n2, n3].sort((a,b) => a - b)[1];
+    return [n1, n2, n3].sort((a, b) => a - b)[1];
 }
 
 console.log(middleInt(1, 2, 2));
@@ -197,3 +197,4 @@ const categorizeCharacters = str => {
 console.log(categorizeCharacters("1234"));
 console.log(categorizeCharacters("abc123$#%"));
 console.log(categorizeCharacters("12ab$%3c%"));
+

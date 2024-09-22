@@ -222,3 +222,12 @@ let phoneNumber = '(123) 123 1234';
 let address = '123 St Chicago IL 12345';
 
 console.log(`User who joined this program is ${firstName} ${lastName}. ${firstName}'s age is ${age}. ${firstName}'s email address is ${emailAddress}, phone number is ${phoneNumber}, and address is ${address}.`);
+
+
+const hasVowel = str => str.search(/[aeiou]/i) !== -1;
+
+console.log(hasVowel(""));
+console.log(hasVowel("sgsdfgsdfgaaa"));
+console.log(hasVowel("ALKHAE"));
+console.log(hasVowel("123123123"));
+console.log(hasVowel("   "));
