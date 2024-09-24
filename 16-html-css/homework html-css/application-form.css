@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+
+form {
+    background-color: white;
+    width: 380px;
+    margin:auto;
+    padding: 10 px;
+}
+
+.group {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.group label {
+    display: block;
+}
+
+.group2 {
+    margin-bottom: 20px;
+}
+
+.group2 label {
+    display: block;
+}
+
+input, label, textarea {
+    width: 70%;
+}
+

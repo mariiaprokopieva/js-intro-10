@@ -1,0 +1,22 @@
+* {
+    text-align: left;
+}
+h1 {
+    color: green;
+    
+}
+
+form {
+    background-color: white;
+    margin:auto;
+    padding: 10 px;
+}
+
+.group {
+    margin-bottom: 20px;
+    
+}
+
+textarea {
+    width: 50%;
+}
