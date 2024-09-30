@@ -1,0 +1,102 @@
+
+
+
+09-29-2024 JS Errors - Functions - Unit Test
+
+Functions
+it is a block of code that can be used repeatedly and increases the code reusability
+- it always runs a task
+- 2 types of Functions
+    void: does not return any value and just runs the task
+    return: returns a value (data) when invoked
+-Functions can be static
+static: can be invoked with its className or prototype
+Math.min()
+non-static: can be invoked with an instance (object) of the className
+
+Creating a Functions
+1. function declaration
+function smth() {
+    // body
+}
+
+2. function expression
+const smth = functions () {
+    // body
+}
+
+3. Arrow function
+const smth = () => {
+    // body
+}
+
+4. Constructor function: special type of function used to create prototypes
+function PrototypeName(arg1, arg2) {
+    this.arg1 = arg1;
+    this.arg2 = arg2;
+}
+
+5. IIFE - Immediately Invoked Function expression
+(function () {
+    //body
+})();
+
+6. Object Property function
+const obj = {
+    smth: function () {
+        // body
+    }
+}
+
+Callback vs Higher Order Function
+function funcA(funcArg) {
+    // body
+}
+
+function funcB {
+    // body
+}
+
+funcA(funcB);
+
+funcA -> Higher Order
+funcB -> Callback
+
+7. Recursive Function
+Recursion: method that invokes itself
+
+function printHello() {
+    console.log('Hello');
+    printHello();
+}
+
+
+Error handling:
+try: this is the block you have your code to be executed and potentially throw an error (it may or may not throw an error)
+catch: is executed when there is an error thrown in the try block. It will be ignored when there is no error
+finally: it will run whether there is an error or not
+
+RULES:
+- try block cannot be used alone!
+- try can be used with catch or finally or both
+- in case you use both  catch and finally with your try block, then the order should be try-catch-finally
+- catch or finally can not be used without try
+
+What type of errors do you face in JS?
+How do you handle errors in JS?
+try catch and sometimes finally block
+
+What is testing pyramid?
+Unit testing: Developer test their own units - a simple component
+Integration testing: Developers/Testers test if multiple components work fine together
+E2E - End to End Testing: User flow - Tester
+
+Unit Testing
+- We don't usually invole in Dev repo. So, we don't conduct unit testing
+
+STEPS TO CREATE A TESTING FRAMEWORK
+- create a new project: unit-testing
+- Initialize this project as Node Project
+    npm init -y
+- This will create a file called package.json
+
