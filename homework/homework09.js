@@ -252,11 +252,9 @@ findUniques([-1, -2], [1, 2])  -> [-1, -2, 1, 2]
 console.log('\n------------------TASK08------------------\n');
 
 const findUniques = (arr1, arr2) => {
-    if(arr1.length === 0 && arr2.length === 0) return [];
     const result = [];
-
     for(const num of arr1) {
-        if(!arr2.includes(num)) result.push(num);
+        if(!arr2.includes(num) && !result.includes(num)) result.push(num);
     }
     for(const num of arr2) {
         if(!arr1.includes(num) && !result.includes(num)) result.push(num);
@@ -303,3 +301,12 @@ console.log(isPowerOf3(27));
 console.log(isPowerOf3(100));
 console.log(isPowerOf3(81));
 console.log(isPowerOf3(9));
+
+
+const noDigit = str => str.replace(/\d/g, '');
+
+console.log(noDigit(""));
+console.log(noDigit("Javascript"));
+console.log(noDigit("123Hello"));
+console.log(noDigit("123Hello World149"));
+console.log(noDigit("123Tech456Global149"));
