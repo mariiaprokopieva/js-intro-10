@@ -70,7 +70,7 @@ const calculateTotalPrice2 = cart => {
     
     for(const item in cart) {
     if(item === 'apple' && cart[item] > 1) total += prices[item] * (cart[item] -  0.5 * Math.floor(cart[item] / 2));
-    else if(item === 'mango' && cart[item] > 4) total += prices[item] * (cart[item] - Math.floor(cart[item] / 4));
+    else if(item === 'mango' && cart[item] > 3) total += prices[item] * (cart[item] - Math.floor(cart[item] / 4));
     else total += prices[item] * cart[item];
     }
 
