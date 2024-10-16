@@ -57,7 +57,7 @@ calculateTotalPrice2({ Apple: 0, Pineapple: 0, Orange: 0 })  -> 0
 calculateTotalPrice1({ Apple: 4, Pineapple: 1, Orange: 1, Mango:3 })  -> 29.51
 */
 
-console.log('\n------------------TASK02------------------\n'); // FIGURE OUT THE FORMULA FOR APPLES
+console.log('\n------------------TASK02------------------\n');
 const calculateTotalPrice2 = cart => {
     const prices = {
         apple: 2.00,
@@ -162,7 +162,7 @@ reverseNumber(0)  -> 0
 reverseNumber(111)  -> 111
 */
 
-console.log('\n------------------TASK05------------------\n'); // didn't solve it myself, found solution on web
+console.log('\n------------------TASK05------------------\n'); 
 
 function reverseNumber(number) {
     let revNumber = 0;
