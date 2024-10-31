@@ -69,12 +69,12 @@ const calculateTotalPrice2 = cart => {
     let total = 0;
     
     for(const item in cart) {
-    if(item === 'apple' && cart[item] > 1) total += prices[item] * (cart[item] -  0.5 * Math.floor(cart[item] / 2));
-    else if(item === 'mango' && cart[item] > 3) total += prices[item] * (cart[item] - Math.floor(cart[item] / 4));
+    if(item === 'apple') total += prices[item] * (cart[item] -  0.5 * Math.floor(cart[item] / 2));
+    else if(item === 'mango') total += prices[item] * (cart[item] - Math.floor(cart[item] / 4));
     else total += prices[item] * cart[item];
     }
 
-    return total.toFixed(2);
+    return total === 0 ? 0 : total.toFixed(2);
 }
 
 console.log(calculateTotalPrice2({ apple: 3, mango: 5 }));
