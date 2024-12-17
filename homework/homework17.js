@@ -80,24 +80,12 @@ calculateGCD(60, 48)  -> 12
 console.log('\n------------------TASK03------------------\n');
 
 const calculateGCD = (num1, num2) => {
-    let divisors = [];
-    
-
-    for(let i = 1; i <= num1; i++) {
-        if(num1 % i === 0) divisors.push(i);
-    }
-
-    for(let i = 1; i <= num2; i++) {
-        if(num2 % i === 0) divisors.push(i);
-    }
-
-    let commonnDivisors = [];
-
-    for(let i = 0; i < divisors.length; i++) {
-        if(divisors.includes(divisors[i], i + 1) && !commonnDivisors.includes(divisors[i])) commonnDivisors.push(divisors[i]);
-    }
-
-    return commonnDivisors[commonnDivisors.length - 1] ?? num1 === 0 ? num2 : num1;
+    for (let temp = num2; num2 !== 0;) { 
+        num2 = num1 % num2; 
+        num1 = temp; 
+        temp = num2; 
+    } 
+    return num1; 
 }
 
 console.log(calculateGCD(8, 12));
@@ -127,15 +115,8 @@ calculateLCM(60, 48)  -> 240
 console.log('\n------------------TASK04------------------\n');
 
 const calculateLCM = (num1, num2) => {
-    let multiples = [];
-
-    for(let i = 1; i <= 20; i++) {
-        multiples.push(num1 * i, num2 * i);
-    }
-
-    for(let i = 0; i < multiples.length; i++) {
-        if(multiples.includes(multiples[i], i + 1)) return multiples[i];
-    }
+    const gcdValue = calculateGCD(num1, num2);
+    return (num1 * num2) / gcdValue;
 }
 
 console.log(calculateLCM(8, 12));
